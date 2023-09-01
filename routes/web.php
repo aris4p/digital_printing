@@ -15,6 +15,7 @@ use App\Http\Controllers\OrderController;
 |
 */
 
+Route::get('/', [AuthController::class, 'index']);
 Route::get('/order', [OrderController::class, 'index'])->name('order');
 
-Route::get('/admin/login', [AuthController::class, 'index'])->name('login-admin');
+Route::get('/admin/login', [AuthController::class, 'login'])->name('login-admin');

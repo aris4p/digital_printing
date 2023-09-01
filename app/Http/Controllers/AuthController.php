@@ -8,6 +8,11 @@ class AuthController extends Controller
 {
     public function index()
     {
+        return view ('index');
+    }
+
+    public function login()
+    {
         return view ('admin.login');
     }
 }
