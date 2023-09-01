@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Xendit\Xendit;
+use Illuminate\Support\Str;
+
 class OrderController extends Controller
 {
 
@@ -21,26 +23,17 @@ class OrderController extends Controller
     public function payment(Request $request)
     {
 
+        dd($request->all());
+
         $params = [
-            'external_id' => 'demo_1475801962607',
-            'amount' => 50000,
-            'description' => 'Invoice Demo #123',
+            'external_id' => Str::uuid(),
+            'amount' => $request->amount,
+            'description' => $request->description,
             'invoice_duration' => 86400,
             'customer' => [
-                'given_names' => 'John',
-                'surname' => 'Doe',
-                'email' => 'arisanggara72@gmail.com',
-                'mobile_number' => '+6287774441111',
-                'addresses' => [
-                    [
-                        'city' => 'Jakarta Selatan',
-                        'country' => 'Indonesia',
-                        'postal_code' => '12345',
-                        'state' => 'Daerah Khusus Ibukota Jakarta',
-                        'street_line1' => 'Jalan Makan',
-                        'street_line2' => 'Kecamatan Kebayoran Baru'
-                    ]
-                ]
+                'given_names' => $request->nama_customer,
+                'email' => $request->email_customer,
+                'mobile_number' => $request->nohp_customer,
             ],
             'customer_notification_preference' => [
                 'invoice_created' => [
@@ -73,17 +66,22 @@ class OrderController extends Controller
             'currency' => 'IDR',
             'items' => [
                 [
-                    'name' => 'Air Conditioner',
-                    'quantity' => 1,
-                    'price' => 100000,
+                    'name' => $request->nama_product,
+                    'quantity' => $request->qty,
+                    'price' => $request->price,
                     'category' => 'Electronic',
                     'url' => 'https=>//yourcompany.com/example_item'
                 ]
             ]
           ];
-
+          return response()->json([$params]);
           $createInvoice = \Xendit\Invoice::create($params);
 
           return response()->json(['data' => $createInvoice]);
+    }
+
+    public function callback()
+    {
+
     }
 }
