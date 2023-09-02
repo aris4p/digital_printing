@@ -21,3 +21,5 @@ Route::get('/order', [OrderController::class, 'index'])->name('order');
 Route::get('/admin/login', [AuthController::class, 'login'])->name('login-admin');
 
 Route::post('/payment', [OrderController::class, 'payment'])->name('payment');
+Route::get('/order/lacak', [OrderController::class, 'lacak'])->name('lacak_pesanan');
+Route::get('/payment/detail', [OrderController::class, 'get_link'])->name('get_link');

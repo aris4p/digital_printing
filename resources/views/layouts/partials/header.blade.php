@@ -20,7 +20,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Digital Printing</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="{{ url('/') }}">Digital Printing</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="{{ asset ('assets/img/logo.png') }}" alt="" class="img-fluid"></a>-->
 
@@ -32,7 +32,13 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="{{ route('order') }}" class="book-a-table-btn scrollto d-none d-lg-flex">Pesan Sekarang</a>
+      <div class="d-flex">
+
+          <a href="{{ route('order') }}" class="book-a-table-btn scrollto d-none d-lg-flex">Pesan Sekarang</a>
+          <a href="{{ route('lacak_pesanan') }}" class="book-a-table-btn scrollto d-none d-lg-flex">Lacak Pesanan</a>
+        </div>
+
+
 
     </div>
   </header><!-- End Header -->
