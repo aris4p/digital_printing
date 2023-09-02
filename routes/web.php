@@ -19,3 +19,5 @@ Route::get('/', [AuthController::class, 'index']);
 Route::get('/order', [OrderController::class, 'index'])->name('order');
 
 Route::get('/admin/login', [AuthController::class, 'login'])->name('login-admin');
+
+Route::post('/payment', [OrderController::class, 'payment'])->name('payment');
