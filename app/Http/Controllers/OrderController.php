@@ -107,7 +107,8 @@ class OrderController extends Controller
                 $transaction->nohp  = $request->no_hp;
                 $transaction->status = $createInvoice['status'];
                 $transaction->save();
-                return response()->json(['message' =>$transaction]);
+                return redirect()->intended('https://checkout-staging.xendit.co/v2/'.$transaction->id_xendit);
+                // return response()->json(['message' =>$transaction]);
             }
 
             public function lacak()
@@ -119,6 +120,6 @@ class OrderController extends Controller
             {
 
                 $getInvoice = \Xendit\Invoice::retrieve($request->invoice);
-                return response()->json([$getInvoice['invoice_url']]);
+                return response()->json([$getInvoice]);
             }
         }
