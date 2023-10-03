@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Xendit\Xendit;
+use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -20,7 +21,10 @@ class OrderController extends Controller
 
     public function index()
     {
-        return view ('order');
+        $product = Product::all();
+        return view ('order', [
+            'title' => "Order"
+        ], compact('product'));
     }
 
     public function payment(Request $request)

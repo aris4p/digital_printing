@@ -39,12 +39,9 @@
           <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
             <select class="form-control" name="product" id="product" value="{{ old('product') }}">
               <option  disabled selected>Pilih Produk</option>
-              <option value="1" {!! old('product') == 'kartu_nama' ? 'selected' : '' !!}>Kartu Nama</option>
-              <option value="2">Kop Surat</option>
-              <option value="3">Amplop Surat</option>
-              <option value="4">Invoice</option>
-              <option value="5">Brosur</option>
-              <option value="6">Flyer</option>
+              @foreach ($product as $produk)
+              <option value="{{ $produk->id_product }}" {!! old('product') == 'kartu_nama' ? 'selected' : '' !!}>{{ $produk->nama_product }}</option>
+              @endforeach
             </select>
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
@@ -63,8 +60,8 @@
           <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0"></div>
           <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
             <label style="color: #a49b89;">Total harga :</label>
-            <input type="hidden" name="amount" value="10000">
-            <span style="color: #a49b89;">Rp. 90000</span>
+            <input type="hidden" name="amount" value="">
+            <span style="color: #a49b89;"></span>
           </div>
 
         </div>
