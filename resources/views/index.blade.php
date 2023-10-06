@@ -9,13 +9,12 @@
               <h2>Apapun design yang kalian punya kami dapat mencetaknya!</h2>
 
               <div class="btns">
-                <a href="#menu" class="btn-menu animated fadeInUp scrollto">Produk kami</a>
-                <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Pesan Sekarang</a>
+                <a href="{{ route('order') }}" class="btn-book animated fadeInUp scrollto">Pesan Sekarang</a>
               </div>
             </div>
-            <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+            {{-- <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
               <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
-            </div>
+            </div> --}}
 
           </div>
         </div>
@@ -27,7 +26,7 @@
           <div class="row">
             <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
               <div class="about-img">
-                <img src="assets/img/about.jpg" alt="">
+                <img src="assets/img/cetak.jpg" alt="">
               </div>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -75,24 +74,29 @@
             <div class="col-lg-4">
               <div class="box" data-aos="zoom-in" data-aos-delay="100">
                 <span>01</span>
-                <h4>Hasil Rapih</h4>
-                <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                <h4>Pengalaman dan Keahlian</h4>
+                <p>Digital Printing telah beroperasi dalam industri percetakan selama lebih dari 10 tahun. Selama periode ini, kami telah membangun portofolio yang kaya dengan berbagai jenis proyek percetakan. Kami memiliki pengetahuan mendalam tentang teknik pencetakan terbaru dan dapat memberikan hasil berkualitas tinggi untuk setiap pekerjaan percetakan.
+
+
+
+
+                </p>
               </div>
             </div>
 
             <div class="col-lg-4 mt-4 mt-lg-0">
               <div class="box" data-aos="zoom-in" data-aos-delay="200">
                 <span>02</span>
-                <h4>Repellat Nihil</h4>
-                <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+                <h4>Kualitas Tinggi</h4>
+                <p>Kami bangga dengan komitmen kami untuk memberikan hasil cetakan berkualitas tinggi kepada pelanggan kami. Kami menggunakan peralatan dan teknologi terkini dalam semua tahapan proses percetakan, mulai dari desain hingga cetak dan finishing. Dengan standar mutu yang ketat, kami memastikan bahwa setiap proyek percetakan memenuhi harapan dan kepuasan pelanggan.</p>
               </div>
             </div>
 
             <div class="col-lg-4 mt-4 mt-lg-0">
               <div class="box" data-aos="zoom-in" data-aos-delay="300">
                 <span>03</span>
-                <h4> Ad ad velit qui</h4>
-                <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+                <h4>Pilihan Material dan Finishing</h4>
+                <p>Kami menawarkan berbagai pilihan material cetakan, mulai dari kertas berkualitas tinggi hingga bahan khusus seperti kanvas atau acrylic. Kami juga memiliki berbagai pilihan finishing, seperti laminasi, emboss, atau stempel panas. Dengan banyaknya pilihan ini, kami dapat membantu Anda menciptakan cetakan yang tepat sesuai dengan kebutuhan dan preferensi Anda.</p>
               </div>
             </div>
 
@@ -101,7 +105,7 @@
         </div>
       </section><!-- End Why Us Section -->
 
-      <!-- ======= Menu Section ======= -->
+      {{-- <!-- ======= Menu Section ======= -->
       <section id="menu" class="menu section-bg">
         <div class="container" data-aos="fade-up">
 
@@ -216,9 +220,9 @@
           </div>
 
         </div>
-      </section><!-- End Menu Section -->
+      </section><!-- End Menu Section --> --}}
 
-      <!-- ======= Specials Section ======= -->
+      {{-- <!-- ======= Specials Section ======= -->
       <section id="specials" class="specials">
         <div class="container" data-aos="fade-up">
 
@@ -315,10 +319,10 @@
 
         </div>
       </section><!-- End Specials Section -->
+ --}}
 
 
-
-      <!-- ======= Testimonials Section ======= -->
+      {{-- <!-- ======= Testimonials Section ======= -->
       <section id="testimonials" class="testimonials section-bg">
         <div class="container" data-aos="fade-up">
 
@@ -400,9 +404,9 @@
           </div>
 
         </div>
-      </section><!-- End Testimonials Section -->
+      </section><!-- End Testimonials Section --> --}}
 
-      <!-- ======= Gallery Section ======= -->
+      {{-- <!-- ======= Gallery Section ======= -->
       <section id="gallery" class="gallery">
 
         <div class="container" data-aos="fade-up">
@@ -483,9 +487,9 @@
           </div>
 
         </div>
-      </section><!-- End Gallery Section -->
+      </section><!-- End Gallery Section --> --}}
 
-      <!-- ======= Chefs Section ======= -->
+      {{-- <!-- ======= Chefs Section ======= -->
       <section id="chefs" class="chefs">
         <div class="container" data-aos="fade-up">
 
@@ -553,7 +557,7 @@
           </div>
 
         </div>
-      </section><!-- End Chefs Section -->
+      </section><!-- End Chefs Section --> --}}
 
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
@@ -565,9 +569,9 @@
           </div>
         </div>
 
-        <div data-aos="fade-up">
+        {{-- <div data-aos="fade-up">
           <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </div> --}}
 
         <div class="container" data-aos="fade-up">
 
@@ -578,28 +582,28 @@
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Alam Sutera</p>
                 </div>
 
                 <div class="open-hours">
                   <i class="bi bi-clock"></i>
-                  <h4>Open Hours:</h4>
+                  <h4>Jam Buka:</h4>
                   <p>
-                    Monday-Saturday:<br>
-                    11:00 AM - 2300 PM
+                    Senin-Sabtu:<br>
+                    09:00 Pagi - 20:00 Malam
                   </p>
                 </div>
 
                 <div class="email">
                   <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>arisanggara72@gmail.com</p>
                 </div>
 
                 <div class="phone">
                   <i class="bi bi-phone"></i>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
+                  <p>+62 896 7476 1189</p>
                 </div>
 
               </div>
