@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('nohp');
+            $table->string('qty');
+            $table->string('harga_total');
+            $table->string('gambar');
+            $table->string('pesan');
             $table->string('status');
             $table->timestamps();
         });

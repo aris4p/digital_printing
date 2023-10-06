@@ -9,21 +9,33 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view ('admin.login');
+        return view ('admin.login', [
+            'title' => "Login Admin"
+        ]);
     }
-
+    
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
-
+        
         if (Auth::attempt($credentials)){
             $request->session()->regenerate();
-
+            
             return redirect()->intended(route('dashboard'));
         }
         return back()->with('loginError','email atau password salah');
+    }
+    
+    public function logout(Request $request){
+        Auth::logout();
+        
+        $request->session()->invalidate();
+        
+        $request->session()->regenerateToken();
+        
+        return redirect(route('login'));
     }
 }
